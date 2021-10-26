@@ -156,7 +156,7 @@ public class InterfaceRobo extends JFrame {
 						if (pegaValorCelula(celula).equals("Quantidade")) {
 							produto.setQuant(0);
 						} else if (pegaValorCelula(celula).contains(".")) {
-							produto.setQuant(Integer.valueOf(pegaValorCelula(celula).substring(0,pegaValorCelula(celula).indexOf(".")-1 )));
+							produto.setQuant(Integer.valueOf(pegaValorCelula(celula).substring(0,pegaValorCelula(celula).indexOf("."))));
 							}else {
 							produto.setQuant(Integer.valueOf(pegaValorCelula(celula)));
 						}
@@ -167,6 +167,7 @@ public class InterfaceRobo extends JFrame {
 					}
 					
 				});
+				System.out.println(produto.toString());
 				produtos.add(produto);			
 				
 			});
